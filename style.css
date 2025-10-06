@@ -49,7 +49,7 @@ body {
 }
 
 /* ===============================
-   BAŞLIKLAR
+   BAŞLIKLAR (KESİN FONT TANIMI)
 ================================== */
 h1, h2, h3 {
     font-family: 'IBM Plex Sans', sans-serif !important;
@@ -249,7 +249,7 @@ header::before {
 }
 
 #galeri h1 {
-    color: var(--primary-blue);
+    color: rgb(28, 64, 147);
     margin-bottom: 15px;
 }
 
@@ -276,7 +276,7 @@ header::before {
 .galeri-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Kutuyu tamamen doldurur */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
@@ -331,6 +331,16 @@ header::before {
     margin-bottom: 40px;
 }
 
+.cizgi {
+    width: 80px;
+    height: 4px;
+    background-color: #ffcc00;
+    border: none;
+    margin: 0 auto 20px;
+    border-radius: 2px;
+}
+
+/* İLETİŞİM KARTLARI */
 .contact-cards {
     display: flex;
     justify-content: center;
@@ -356,6 +366,19 @@ header::before {
     transition: all 0.3s ease;
 }
 
+.contact-card.instagram:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #bc1888);
+    box-shadow: 0 0 15px rgba(220,39,67,0.6);
+}
+.contact-card.whatsapp:hover {
+    background: linear-gradient(45deg, #25D366, #128C7E);
+    box-shadow: 0 0 15px rgba(37,211,102,0.6);
+}
+.contact-card.phone:hover {
+    background: linear-gradient(45deg, #FFD700, #c6a000);
+    box-shadow: 0 0 15px rgba(255,215,0,0.5);
+}
+
 .contact-card i {
     font-size: 2.2em;
     margin-bottom: 8px;
@@ -365,8 +388,108 @@ header::before {
     transform: translateY(-5px) scale(1.05);
 }
 
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 15px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
 /* ===============================
-   RESPONSIVE GÖRÜNÜM
+   ARIZA DETAYLARI BÖLÜMÜ
+================================== */
+#ariza-detaylari {
+    padding: 50px 20px 70px 20px;
+    background-color: #f9f9fb;
+    text-align: center;
+}
+
+#ariza-detaylari h1 {
+    color: rgb(28, 64, 147);
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+#ariza-detaylari .cizgi {
+    width: 70px;
+    height: 4px;
+    background-color: #FFD700;
+    border: none;
+    margin: 0 auto 35px auto;
+    border-radius: 2px;
+}
+
+/* İçerik Kutusu */
+.icerik-alani {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    padding: 25px;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Başlık ve Paragraflar */
+.icerik-alani h2 {
+    font-size: 1.3rem;
+    color: rgb(28, 64, 147);
+    margin-bottom: 8px;
+    margin-top: 25px;
+    border-left: 5px solid #FFD700;
+    padding-left: 10px;
+}
+
+.icerik-alani h3 {
+    font-size: 1.2rem;
+    color: rgb(28, 64, 147);
+    margin-top: 30px;
+    border-left: 4px solid #FFD700;
+    padding-left: 10px;
+}
+
+.icerik-alani p {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.icerik-alani ul {
+    margin: 10px 0 20px 25px;
+    padding-left: 10px;
+}
+
+.icerik-alani li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.icerik-kalin b {
+    color: rgb(28, 64, 147);
+}
+
+/* Görsel Tasarımı */
+.urunfoto {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto 25px auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.urunfoto:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+   RESPONSIVE TASARIM
 ================================== */
 @media (max-width: 1200px) {
     .galeri-container {
@@ -375,20 +498,136 @@ header::before {
 }
 
 @media (max-width: 992px) {
-    .galeri-container {
-        grid-template-columns: repeat(2, 1fr);
+    #ariza-detaylari h1 {
+        font-size: 1.7rem;
+    }
+
+    .icerik-alani {
+        padding: 20px;
+    }
+
+    .urunfoto {
+        max-width: 350px;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .galeri-container {
-        grid-template-columns: repeat(2, 1fr); /* Hiçbir cihazda tek sütun olmaz */
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 2.1em !important;
+    }
+
+    #ariza-detaylari h1 {
+        font-size: 1.5rem;
+    }
+
+    .icerik-alani {
+        padding: 15px;
+    }
+
+    .urunfoto {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeri-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 1.7em !important;
+    }
+
+    #ariza-detaylari h1 {
+        font-size: 1.35rem;
+    }
+
+    .icerik-alani h2 {
+        font-size: 1.15rem;
+    }
+
+    .icerik-alani p {
+        font-size: 1rem;
+    }
+
+    .urunfoto {
+        max-width: 260px;
     }
 }
 
 /* ===============================
-   FONT ZORLAMASI
+   GLOBAL MOBİL ÖLÇEKLEME (TÜM SAYFA)
+================================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.25rem !important;
+    }
+
+    h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .card {
+        width: 220px;
+        padding: 15px;
+    }
+
+    .card img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .icerik-alani {
+        padding: 15px;
+    }
+
+    .urunfoto {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 1.1rem !important;
+    }
+
+    h3 {
+        font-size: 1rem !important;
+    }
+
+    .card {
+        width: 180px;
+        padding: 12px;
+    }
+
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .icerik-alani {
+        padding: 12px;
+    }
+
+    .urunfoto {
+        max-width: 260px;
+    }
+}
+
+/* ===============================
+   FONT ZORLAMASI (HER YER IBM PLEX)
 ================================== */
 body, h1, h2, h3, h4, h5, h6, p, a, li, button, span, div {
     font-family: "IBM Plex Sans", sans-serif !important;
