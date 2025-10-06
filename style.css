@@ -22,13 +22,14 @@ html {
 }
 
 /* ===============================
-   GENEL BODY ve YAZI STİLİ
+   BODY ve TEMEL YAZI STİLİ
 ================================== */
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f7f6;
+    font-size: 16px; /* Baz alınacak boyut */
 }
 
 /* ===============================
@@ -40,21 +41,20 @@ h1 {
     padding-top: 50px;
     margin-bottom: 15px;
     font-family: 'TASA Explorer', serif;
-    font-size: 2.8em; 
-    letter-spacing: 1px;
+    font-size: 2.6em; 
+    letter-spacing: 0.5px;
 }
 
-/* Yatay Çizgi */
 .cizgi {
     width: 70px; 
     height: 4px;
     background-color: var(--accent-yellow); 
     border: none;
-    margin: 0 auto 50px auto; 
+    margin: 0 auto 45px auto; 
 }
 
 /* ===============================
-   HEADER ve NAVİGASYON
+   HEADER
 ================================== */
 header {
     background: linear-gradient(135deg, #0328b4 0%, #01104e 100%);
@@ -62,7 +62,7 @@ header {
 
 #Header {
     color: white;
-    padding: 20px 0 50px 0; 
+    padding: 20px 0 45px 0; 
     text-align: center;
 }
 
@@ -70,26 +70,24 @@ header {
     display: flex;
     flex-direction: column; 
     align-items: center;
-    width: fit-content;
     margin: 0 auto;
 }
 
 #logo img {
-    width: 260px; 
-    height: auto; 
-    max-width: 100%; 
+    width: 240px;
+    height: auto;
 }
 
 #headerbutton {
     background: linear-gradient(#FFD700, #f0c300);
     color: var(--primary-blue);
     border: none; 
-    padding: 12px 30px; 
+    padding: 10px 26px; 
     border-radius: 25px; 
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 700; 
-    margin-top: 35px; 
+    margin-top: 30px; 
     text-transform: uppercase;
     transition: all 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -102,28 +100,28 @@ header {
 }
 
 /* ===============================
-   HİZMETLER BÖLÜMÜ
+   HİZMETLER
 ================================== */
 #hizmetler {
-    padding: 50px 20px 0 20px; 
+    padding: 45px 20px 0 20px; 
 }
 
 .card-container {
-    max-width: 1200px; 
+    max-width: 1100px; 
     margin: 0 auto; 
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 30px; 
+    gap: 25px; 
     padding-bottom: 50px;
 }
 
 .card {
     background-color: white;
-    width: 280px; 
-    padding: 20px; 
+    width: 260px; 
+    padding: 18px; 
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
@@ -137,14 +135,19 @@ header {
 }
 
 .card img {
-    width: 190px; 
-    height: 190px;
-    margin-bottom: 15px;
+    width: 160px; 
+    height: 160px;
+    margin-bottom: 12px;
     object-fit: contain; 
 }
 
+.card h3 {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
 /* ===============================
-   HAKKINDA BÖLÜMÜ
+   HAKKINDA
 ================================== */
 #hakkinda-section {
     background-color: white;
@@ -153,27 +156,28 @@ header {
 }
 
 #hakkindakart {
-    max-width: 800px;
+    max-width: 750px;
     margin: 20px auto;
     padding: 0 20px;
+    font-size: 0.95em;
 }
 
 #hakkindakart p {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     text-align: left;
 }
 
 #hakkinda-section iframe {
     width: 90%;
-    height: 400px;
+    height: 350px;
     border: 0;
-    margin-top: 30px;
+    margin-top: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* ===============================
-   GALERİ BÖLÜMÜ
+   GALERİ
 ================================== */
 #galeri {
     padding: 20px 0 50px 0;
@@ -183,23 +187,21 @@ header {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
-    max-width: 1200px; 
+    max-width: 1100px; 
     margin: auto;
-    padding: 0 20px; 
+    padding: 0 20px;
 }
 
 .galeri-item {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 0; 
 }
 
 .galeri-item img {
     width: 100%;
-    height: 200px; 
+    height: 180px; 
     object-fit: cover;
-    display: block;
     transition: transform 0.5s ease;
 }
 
@@ -208,15 +210,16 @@ header {
 }
 
 /* ===============================
-   İLETİŞİM BÖLÜMÜ
+   İLETİŞİM
 ================================== */
 #iletisim {
     background-color: var(--primary-blue);
-    padding: 50px 20px;
+    padding: 45px 20px;
 }
 
 #iletisim h1 {
     color: white;
+    font-size: 2.2em;
 }
 
 #iletisim .cizgi {
@@ -226,9 +229,9 @@ header {
 .contact-cards {
     display: flex;
     justify-content: center;
-    gap: 40px; 
+    gap: 30px; 
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
 
 .contact-card {
@@ -238,11 +241,11 @@ header {
     justify-content: center;
     text-decoration: none;
     color: white;
-    padding: 30px 45px;
-    border-radius: 30px;
-    width: 200px;
+    padding: 25px 40px;
+    border-radius: 25px;
+    width: 180px;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1em;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -258,8 +261,8 @@ header {
 }
 
 .contact-card i {
-    font-size: 3em; 
-    margin-bottom: 15px;
+    font-size: 2.4em; 
+    margin-bottom: 10px;
 }
 
 .contact-card:hover {
@@ -274,12 +277,12 @@ footer {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue-end) 100%);
     color: white; 
     text-align: center;
-    padding: 20px 0; 
-    font-size: 0.9em;
+    padding: 18px 0; 
+    font-size: 0.85em;
 }
 
 /* ===============================
-   RESPONSIVE (MOBİL DOSTU TASARIM)
+   RESPONSIVE (MOBİL DOSTU)
 ================================== */
 @media (max-width: 1200px) {
     .galeri-container {
@@ -288,39 +291,69 @@ footer {
 }
 
 @media (max-width: 992px) {
+    body {
+        font-size: 15px;
+    }
     .galeri-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
     header {
         background: linear-gradient(135deg, rgba(3,40,180,0.95) 0%, rgba(1,16,78,0.95) 100%);
     }
 
     h1 {
-        font-size: 2em;
-        padding-top: 30px;
+        font-size: 1.9em;
+        padding-top: 25px;
     }
     
     #logo img {
-        width: 200px;
-        height: auto;
+        width: 180px;
     }
 
     #headerbutton {
-        font-size: 1em;
-        padding: 8px 20px;
-        margin-top: 25px;
+        font-size: 0.9em;
+        padding: 7px 18px;
+        margin-top: 20px;
     }
 
     .card {
-        width: 100%;
-        max-width: 320px; 
+        width: 90%;
+        max-width: 280px;
+        padding: 15px;
     }
-    
+
+    .card img {
+        width: 130px;
+        height: 130px;
+    }
+
     .galeri-container {
         grid-template-columns: 1fr;
+    }
+
+    .galeri-item img {
+        height: 160px;
+    }
+
+    #hakkinda-section iframe {
+        height: 280px;
+    }
+
+    .contact-card {
+        width: 160px;
+        padding: 20px 30px;
+        font-size: 0.9em;
+    }
+
+    .contact-card i {
+        font-size: 2.1em;
     }
 }
 
@@ -340,7 +373,7 @@ footer {
 }
 
 /* ===============================
-   GENEL LİNK ve LİSTE AYARLARI
+   LİNK ve LİSTE AYARLARI
 ================================== */
 a {
     text-decoration: none;
