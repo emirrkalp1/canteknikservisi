@@ -1,4 +1,6 @@
-/* Genel Ayarlar ve Yumuşak Kaydırma (Smooth Scroll) */
+/* ===============================
+   GENEL AYARLAR ve YUMUŞAK KAYDIRMA
+================================== */
 * {
     box-sizing: border-box; 
     margin: 0;
@@ -9,7 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Renk Tanımları */
+/* ===============================
+   RENK TANIMLARI
+================================== */
 :root {
     --primary-blue: #021c86;
     --dark-blue-end: #01104e;
@@ -17,6 +21,9 @@ html {
     --hover-yellow: #f0c300; 
 }
 
+/* ===============================
+   GENEL BODY ve YAZI STİLİ
+================================== */
 body {
     font-family: 'IBM Plex Sans', sans-serif;
     line-height: 1.6;
@@ -24,7 +31,9 @@ body {
     background-color: #f4f7f6;
 }
 
-/* BAŞLIKLAR (H1) BÜYÜTÜLDÜ */
+/* ===============================
+   BAŞLIKLAR
+================================== */
 h1 {
     text-align: center;
     color: var(--primary-blue);
@@ -35,7 +44,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Yatay Çizgi Stili (Sarı) */
+/* Yatay Çizgi */
 .cizgi {
     width: 70px; 
     height: 4px;
@@ -44,9 +53,11 @@ h1 {
     margin: 0 auto 50px auto; 
 }
 
-/* --- Header ve Navigasyon (Gradient Geçişli) --- */
+/* ===============================
+   HEADER ve NAVİGASYON
+================================== */
 header {
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue-end) 100%);
+    background: linear-gradient(135deg, #0328b4 0%, #01104e 100%);
 }
 
 #Header {
@@ -63,18 +74,14 @@ header {
     margin: 0 auto;
 }
 
-    #logo img {
-    /* Logo boyutunu kontrol altına alıyoruz (300px'ten 180px'e düşürüldü) */
-    width: 320px; 
-    height: 320px;
-    max-width: 100%; 
+#logo img {
+    width: 260px; 
     height: auto; 
-    /* height: auto; kuralı, mobil cihazlarda küçülmesini sağlayacak */
+    max-width: 100%; 
 }
 
 #headerbutton {
-    
-    background: linear-gradient(#FFD700, #c39f01);
+    background: linear-gradient(#FFD700, #f0c300);
     color: var(--primary-blue);
     border: none; 
     padding: 12px 30px; 
@@ -94,18 +101,16 @@ header {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-/* --- Hizmetler Bölümü (Kart Boyutu Dengelendi ve Kenar Boşluğu Eklendi) --- */
+/* ===============================
+   HİZMETLER BÖLÜMÜ
+================================== */
 #hizmetler {
-    /* Hizmetler bölümünün tamamına yatay padding eklenerek kenar boşluğu garanti edildi */
     padding: 50px 20px 0 20px; 
 }
 
 .card-container {
-    /* Kenar boşluğu #hizmetler'e taşındığı için buradaki max-width ve padding kaldırıldı. */
     max-width: 1200px; 
     margin: 0 auto; 
-    
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
@@ -138,8 +143,9 @@ header {
     object-fit: contain; 
 }
 
-
-/* --- Hakkında Bölümü --- */
+/* ===============================
+   HAKKINDA BÖLÜMÜ
+================================== */
 #hakkinda-section {
     background-color: white;
     padding: 20px 0 50px 0;
@@ -166,8 +172,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-/* --- Galeri Bölümü --- */
+/* ===============================
+   GALERİ BÖLÜMÜ
+================================== */
 #galeri {
     padding: 20px 0 50px 0;
 }
@@ -178,7 +185,7 @@ header {
     gap: 15px;
     max-width: 1200px; 
     margin: auto;
-    padding: 0 20px; /* Kenar boşluğu Galeri'de korundu */
+    padding: 0 20px; 
 }
 
 .galeri-item {
@@ -200,8 +207,9 @@ header {
     transform: scale(1.05); 
 }
 
-
-/* --- İletişim Bölümü --- */
+/* ===============================
+   İLETİŞİM BÖLÜMÜ
+================================== */
 #iletisim {
     background-color: var(--primary-blue);
     padding: 50px 20px;
@@ -210,6 +218,7 @@ header {
 #iletisim h1 {
     color: white;
 }
+
 #iletisim .cizgi {
     background-color: var(--accent-yellow); 
 }
@@ -258,8 +267,9 @@ header {
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-/* --- Footer --- */
+/* ===============================
+   FOOTER
+================================== */
 footer {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue-end) 100%);
     color: white; 
@@ -268,8 +278,9 @@ footer {
     font-size: 0.9em;
 }
 
-
-/* --- Responsive Ayarlar (Stabiliteye Odaklanıldı) --- */
+/* ===============================
+   RESPONSIVE (MOBİL DOSTU TASARIM)
+================================== */
 @media (max-width: 1200px) {
     .galeri-container {
         grid-template-columns: repeat(3, 1fr);
@@ -283,11 +294,26 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header {
+        background: linear-gradient(135deg, rgba(3,40,180,0.95) 0%, rgba(1,16,78,0.95) 100%);
+    }
+
     h1 {
         font-size: 2em;
         padding-top: 30px;
     }
     
+    #logo img {
+        width: 200px;
+        height: auto;
+    }
+
+    #headerbutton {
+        font-size: 1em;
+        padding: 8px 20px;
+        margin-top: 25px;
+    }
+
     .card {
         width: 100%;
         max-width: 320px; 
@@ -298,7 +324,9 @@ footer {
     }
 }
 
-/* --- Arama Motoru İçin Görünür, Kullanıcı İçin Gizli Metin (SEO Taktik) --- */
+/* ===============================
+   SEO GİZLİ METİN
+================================== */
 .seo-gizli {
     position: absolute;
     width: 1px;
@@ -311,22 +339,22 @@ footer {
     border-width: 0;
 }
 
-/* Genel bağlantı (a) etiketleri için CSS sıfırlama kuralı */
+/* ===============================
+   GENEL LİNK ve LİSTE AYARLARI
+================================== */
 a {
-    text-decoration: none; /* Alt çizgiyi tamamen kaldırır */
-    color: inherit;        /* Yazı rengini, bulunduğu ana elementten miras alır */
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Mouse ile üzerine gelindiğinde hafif bir tepki vermek, tıklanabilir olduğunu belli etmek için */
 a:hover {
-    opacity: 0.85; /* Hafifçe şeffaflaşır */
+    opacity: 0.85;
 }
 
 li {
-    list-style-type: none; /* Liste işaretlerini kaldırır */
+    list-style-type: none;
 }
 
-h2 , h3 {
-    color: #021c86;
+h2, h3 {
+    color: var(--primary-blue);
 }
-
